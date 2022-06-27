@@ -18,7 +18,7 @@ class MapVetoMessage(discord.Message):
             setattr(self, attr_name, attr_val)
 
         self.bot = bot
-        self.ban_order = '121212'
+        self.ban_order = '1212121212121212121'
         self.ban_number = 0
         self.lobby = lobby
         self.maps_left = {m.emoji: m for m in self.lobby.mpool}
