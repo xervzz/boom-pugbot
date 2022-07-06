@@ -236,6 +236,7 @@ class MapStats:
         self.team2_score = data['team2_score']
         self.start_time = data['start_time']
         self.end_time = data['end_time']
+        self.demoFile = data['demoFile']
 
     @classmethod
     async def get_mapstats(cls, match_id: int):

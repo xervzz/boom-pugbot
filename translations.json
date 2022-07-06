@@ -157,6 +157,7 @@
         "lobby-region-already":         "Region is already set to **{}**",
         "set-lobby-region":             "Region set to **{}**",
         "connect-api-error":            "Unable to connect to the API, Please try again later.",
-        "invalid-api-key":              "Invalid API Key"
+        "invalid-api-key":              "Invalid API Key",
+        "demoFile":                     "URL to demofile"
     }
 }

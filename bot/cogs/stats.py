@@ -176,7 +176,8 @@ class StatsCog(commands.Cog, name='Stats Category', description=utils.trans('sta
             if mapstat.end_time:
                 end_time = datetime.fromisoformat(mapstat.end_time.replace(
                     "Z", "+00:00")).strftime("%Y-%m-%d  %H:%M:%S")
-                description += f"**{utils.trans('end-time')}:** {end_time}\n"
+                description += f"**{utils.trans('end-time')}:** {end_time}\n" \
+                               f"**{utils.trans('demoFile')}:** https://panel.knarklangare.se/api/demo/{mapstat.demoFile}\n"
             else: 
                 end_time = "Not Finished..."
                 description += f"**{utils.trans('end-time')}:** {end_time}\n"

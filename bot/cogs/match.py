@@ -471,7 +471,7 @@ class MatchCog(commands.Cog, name='Match Category', description=utils.trans('mat
                 "Z", "+00:00")).strftime("%Y-%m-%d  %H:%M:%S")
             team1_match = []
             team2_match = []
-
+            
             for player_stat in api_scoreboard:
                 if player_stat.map_id != mapstat.id:
                     continue
@@ -482,12 +482,13 @@ class MatchCog(commands.Cog, name='Match Category', description=utils.trans('mat
 
             description += f"**{utils.trans('map')} {mapstat.map_number+1}:** {mapstat.map_name}\n" \
                            f"**{utils.trans('score')}:** {api_match.team1_name}  [{mapstat.team1_score}:{mapstat.team2_score}]  {api_match.team2_name}\n" \
-                           f"**{utils.trans('start-time')}:** {start_time}\n"
+                           f"**{utils.trans('start-time')}:** {start_time}\n" 
 
             if mapstat.end_time:
                 end_time = datetime.fromisoformat(mapstat.end_time.replace(
                     "Z", "+00:00")).strftime("%Y-%m-%d  %H:%M:%S")
-                description += f"**{utils.trans('end-time')}:** {end_time}\n"
+                description += f"**{utils.trans('end-time')}:** {end_time}\n" \
+                               f"**{utils.trans('demoFile')}:** https://panel.knarklangare.se/api/demo/{mapstat.demoFile}\n"                                                         
             
             #regex to remove stupid symbols from names & non alphabetic stuff
             #regex = re.compile('[^a-zA-Z0-9]')
