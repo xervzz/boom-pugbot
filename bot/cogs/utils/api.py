@@ -64,7 +64,8 @@ class Teams:
             'auth_name': {
                 users_data[index]['steam_id']: {
                     'name': user.display_name,
-                    'captain': int(users.index(user) == 0)
+                    'captain': int(users.index(user) == 0),
+                    'coach': False
                 } for index, user in enumerate(users)
             }
         }
